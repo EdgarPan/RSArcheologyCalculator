@@ -34,51 +34,51 @@ namespace RSArcheologyCalculator.Database.DAL
                 Artefacts.Add(Artefact.CreateArtefact(elements));
             }
         }
-        /*
+        
         public enum MaterialIdx
         {
-            "Third Age iron",
-            "Samite silk",
-            "White oak",
-            "Goldrune",
-            "Orthenglass",
-            "Vellum",
-            "Leather scraps",
-            "Soapstone",
-            "Animal furs",
-            "Fossilised bone",
-            "Zarosian insignia",
-            "Imperial steel",
-            "Ancient vis",
-            "Tyrian purple",
-            "Blood of Orcus",
-            "Cadmium red",
-            "Chaotic brimstone",
-            "Demonhide",
-            "Eye of Dagon",
-            "Hellfire metal",
-            "Keramos",
-            "White marble",
-            "Cobalt blue",
-            "Everlight silvthril",
-            "Star of Saradomin",
-            "Stormguard steel",
-            "Wings of War",
-            "Armadylean yellow",
-            "Aetherium alloy",
-            "Quintessence",
-            "Malachite green",
-            "Mark of the Kyzaj",
-            "Vulcanised rubber",
-            "Warforged bronze",
-            "Yu'biusk clay",
-            "Compass rose",
-            "Felt",
-            "Dragon metal",
-            "Carbon black",
-            "Orgone"
+            Third_Age_iron,
+            Samite_silk,
+            White_oak,
+            Goldrune,
+            Orthenglass,
+            Vellum,
+            Leather_scraps,
+            Soapstone,
+            Animal_furs,
+            Fossilised_bone,
+            Zarosian_insignia,
+            Imperial_steel,
+            Ancient_vis,
+            Tyrian_purple,
+            Blood_of_Orcus,
+            Cadmium_red,
+            Chaotic_brimstone,
+            Demonhide,
+            Eye_of_Dagon,
+            Hellfire_metal,
+            Keramos,
+            White_marble,
+            Cobalt_blue,
+            Everlight_silvthril,
+            Star_of_Saradomin,
+            Stormguard_steel,
+            Wings_of_War,
+            Armadylean_yellow,
+            Aetherium_alloy,
+            Quintessence,
+            Malachite_green,
+            Mark_of_the_Kyzaj,
+            Vulcanised_rubber,
+            Warforged_bronze,
+            Yubiusk_clay,
+            Compass_rose,
+            Felt,
+            Dragon_metal,
+            Carbon_black,
+            Orgone
 
-        }*/
+        }
 
         private void ParseArtefactMaterialJoinCSV(string file)
         {
@@ -147,7 +147,7 @@ namespace RSArcheologyCalculator.Database.DAL
                 //Here, we parse all columns as per the values indicated in the idx key above.
                 string ArtefactName = elements[0];
 
-                for (int i = 1; i<elements.Length; i++)
+                for (int i = 1; i<elements.Length-2; i++)
                 {
                     if (String.IsNullOrEmpty(elements[i]))
                     {
@@ -158,15 +158,19 @@ namespace RSArcheologyCalculator.Database.DAL
                         //Something to make the i value (which would be the column in the CSV) correspond to the Material string. Enumeration?
                         //whatever value that has been parsed will be the Material Quantity.
                         int MaterialQuantity = int.Parse(elements[i]);
+                        string MaterialName = ((MaterialIdx) (i - 1)).ToString(); //The Materials Name will not match those in the CSV due to enumeration limitations, gotta find a way to fix.
+
+                        ArtefactMaterialJoin new_entry = new ArtefactMaterialJoin()
+                        {
+                            Artefact_Name = ArtefactName,
+                            Material_Name = MaterialName,
+                            Quantity = MaterialQuantity
+                        };
+
+                        ArtefactMaterialJoins.Add(new_entry);
                     }
                 }
                 
-                foreach (string element in elements)
-                {
-                    if (String.IsNullOrEmpty(element)) continue;
-                    if (int.Parse(element) == 0) continue;
-
-                }
 
                 ArtefactMaterialJoins.Add(ArtefactMaterialJoin.CreateArtefactMaterialJoin(elements));
             }
