@@ -1,0 +1,1 @@
+﻿Model is just a term for all Object Types you're going to be dealing with in a Database or whatever scope (e.g. GUI) you're working in.

@@ -1,0 +1,2 @@
+﻿DAL: Data Abstraction Layer
+To abstract how the data stored or persists from the uses.
