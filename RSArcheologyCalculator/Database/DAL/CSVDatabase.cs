@@ -115,6 +115,8 @@ namespace RSArcheologyCalculator.Database.DAL
 
         private void ParseArtefactMaterialJoinCSV(string file)
         {
+            //Todo: Check whether Artefacts list and Materials list is actually populated
+
             /*
              * Idx Key //Create enumeration
              * [0] Artefact Name
@@ -346,6 +348,15 @@ namespace RSArcheologyCalculator.Database.DAL
             ParseArtefactCSV(Path.Combine(dir, "Artefacts.csv"));
             ParseMaterialCSV(Path.Combine(dir, "Materials.csv"));
             ParseArtefactMaterialJoinCSV(Path.Combine(dir, "ArtefactMaterialJoin.csv"));
+
+
+            //Upload Git Testing
+
+            /*General process:
+             * Create Materials, Artefact, Collection as a base list
+             * Create Joins that will add matching Materials and Artefacts references to each other; i.e. it'll modify Materials, Artefact, Collection to include references to the other elements.
+             *  todo: modify joins to also have a removal function
+             */
         }
 
 
