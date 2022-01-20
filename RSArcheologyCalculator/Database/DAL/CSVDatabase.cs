@@ -18,10 +18,10 @@ namespace RSArcheologyCalculator.Database.DAL
         private List<ArtefactCollectionJoin> ArtefactCollectionJoins = new List<ArtefactCollectionJoin>();
         private List <ArtefactMaterialJoin> ArtefactMaterialJoins = new List<ArtefactMaterialJoin>();
 
-        private void ParseArtefactCSV(string file)
+        private void ParseArtefactCSV(string file, bool clear_old_list)
         {
             //Assumes we're generating a fresh list of Artefact... not sure if we actually want to do that though.
-            Artefacts = new List<Artefact>();
+            if (clear_old_list) Artefacts = new List<Artefact>();
             
             string[] lines = File.ReadAllLines(file); //Creates an array of the Row values
             foreach(string line in lines)
@@ -34,10 +34,15 @@ namespace RSArcheologyCalculator.Database.DAL
                 Artefacts.Add(Artefact.CreateArtefact(elements));
             }
         }
-        
-        private void ParseMaterialCSV(string file)
+
+        private void ParseArtefactCSV(string file)
         {
-            Materials = new List<Material>();
+            ParseArtefactCSV(file, false);
+        }
+        
+        private void ParseMaterialCSV(string file, bool clear_old_list)
+        {
+            if (clear_old_list) Materials = new List<Material>();
 
             string[] lines = File.ReadAllLines(file);
             foreach(string line in lines)
@@ -49,6 +54,11 @@ namespace RSArcheologyCalculator.Database.DAL
                 string[] elements = line.Split(',');
                 Materials.Add(Material.CreateMaterial(elements));
             }
+        }
+
+        private void ParseMaterialCSV(string file)
+        {
+            ParseMaterialCSV(string file, false);
         }
 
         private void ParseCollectionCSV(string file)
