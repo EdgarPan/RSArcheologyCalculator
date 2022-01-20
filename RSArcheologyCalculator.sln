@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSArcheologyCalculator", "RSArcheologyCalculator\RSArcheologyCalculator.csproj", "{9F6F0492-0C1C-47C0-91DF-E143A3F3709D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_RSArcheologyCalculator", "UnitTest_RSArcheologyCalculator\UnitTest_RSArcheologyCalculator.csproj", "{26F56ABB-5046-48F5-9ED3-423A893FEECB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -41,6 +43,30 @@ Global
 		{9F6F0492-0C1C-47C0-91DF-E143A3F3709D}.Release|x86.ActiveCfg = Release|x86
 		{9F6F0492-0C1C-47C0-91DF-E143A3F3709D}.Release|x86.Build.0 = Release|x86
 		{9F6F0492-0C1C-47C0-91DF-E143A3F3709D}.Release|x86.Deploy.0 = Release|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM.ActiveCfg = Debug|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM.Build.0 = Debug|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM.Deploy.0 = Debug|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM64.Build.0 = Debug|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x64.ActiveCfg = Debug|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x64.Build.0 = Debug|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x64.Deploy.0 = Debug|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x86.ActiveCfg = Debug|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x86.Build.0 = Debug|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Debug|x86.Deploy.0 = Debug|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM.ActiveCfg = Release|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM.Build.0 = Release|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM.Deploy.0 = Release|ARM
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM64.ActiveCfg = Release|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM64.Build.0 = Release|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|ARM64.Deploy.0 = Release|ARM64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x64.ActiveCfg = Release|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x64.Build.0 = Release|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x64.Deploy.0 = Release|x64
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x86.ActiveCfg = Release|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x86.Build.0 = Release|x86
+		{26F56ABB-5046-48F5-9ED3-423A893FEECB}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

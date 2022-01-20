@@ -14,7 +14,7 @@ namespace RSArcheologyCalculator.Database.Model
         public string Artefact_Name;
         public string Collection_Name;
 
-        public static ArtefactCollectionJoin CreateArtefactCollectionJoin(string [] fields)
+        public static ArtefactCollectionJoin CreateArtefactCollectionJoin(string [] fields, Artefact artefact)
         {
             string Artefact_Name = fields[0];
             string Collection_Name = fields[1];

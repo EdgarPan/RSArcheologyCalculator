@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTest_RSArcheologyCalculator
 {
-    [TestClass]
+    [TestClass] //Attribute, leave alone.
     public class UnitTest1
     {
         [TestMethod]

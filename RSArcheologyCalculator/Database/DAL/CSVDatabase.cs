@@ -350,7 +350,6 @@ namespace RSArcheologyCalculator.Database.DAL
             ParseArtefactMaterialJoinCSV(Path.Combine(dir, "ArtefactMaterialJoin.csv"));
 
 
-            //Upload Git Testing
 
             /*General process:
              * Create Materials, Artefact, Collection as a base list
